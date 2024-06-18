@@ -1,30 +1,33 @@
 import numpy as np
+from scipy.stats import rankdata
 
 def bounds_sum_rank(X, Y, ties, lower_boundary, upper_boundary):
+    
     # Sample size
     n = len(X)
     m = len(Y)
 
     # Observed samples in X and Y, respectively
-    X_prime = [x for x in X if not np.isnan(x)]
-    Y_prime = [y for y in Y if not np.isnan(y)]
+    X_prime = X[~np.isnan(X)]
+    Y_prime = Y[~np.isnan(Y)]
 
     # All observed samples
     Z_prime = np.concatenate((X_prime, Y_prime))
-    r = np.argsort(Z_prime)
 
     # Observed sample size
     n_prime = len(X_prime)
     m_prime = len(Y_prime)
 
     # Sum of ranks of X_prime in Z_prime
-    rankSumX_prime = np.sum(np.arange(1, len(Z_prime) + 1)[r[:n_prime]])
+    rankSumX_prime = np.sum(rankdata(Z_prime, method = 'average')[:n_prime])
 
     # Bounds of sum of ranks of X in Z without ties
-    lowerBoundSumRank = (rankSumX_prime +
+    lowerBoundSumRank = (rankSumX_prime + 
                          (n - n_prime) * (n + n_prime + 1) / 2)
+    
     upperBoundSumRank = (rankSumX_prime +
-                         (n * (n + 2 * m + 1) - n_prime * (n_prime + 2 * m_prime + 1)) / 2)
+                         (n * (n + 2 * m + 1) - n_prime * 
+                          (n_prime + 2 * m_prime + 1)) / 2)
 
     # Bounds of sum of ranks of X in Z with ties
     if ties:
@@ -45,21 +48,24 @@ def bounds_sum_rank(X, Y, ties, lower_boundary, upper_boundary):
             b = np.inf
 
         lowerBoundSumRank += (np.sum(np.array(Y_prime) == a) * (n - n_prime)
-                              + np.sum(np.array(X_prime) == b) * (m - m_prime)) / 2
+                              + np.sum(np.array(X_prime) == b) 
+                              * (m - m_prime)) / 2
 
         upperBoundSumRank -= (np.sum(np.array(X_prime) == a) * (m - m_prime)
-                              + np.sum(np.array(Y_prime) == b) * (n - n_prime)) / 2
+                              + np.sum(np.array(Y_prime) == b) 
+                              * (n - n_prime)) / 2
 
     return np.array([lowerBoundSumRank, upperBoundSumRank])
 
 # Example usage:
-# X = np.array([1, 2, np.nan, 4, 5])
-# Y = np.array([3, np.nan, 6, 7])
-# ties = True
-# lower_boundary = -np.inf
-# upper_boundary = np.inf
+X = np.array([1, 2, np.nan, 4, 5])
+Y = np.array([3, np.nan, 6, 7])
+ties = True
+lower_boundary = -np.inf
+upper_boundary = np.inf
 
-# result = bounds_sum_rank(X, Y, ties, lower_boundary, upper_boundary)
-# print("Lower bound:", result[0])
-# print("Upper bound:", result[1])
+result = bounds_sum_rank(X, Y, ties, lower_boundary, upper_boundary)
+print("Lower bound:", result[0])
+print("Upper bound:", result[1])
+
 
