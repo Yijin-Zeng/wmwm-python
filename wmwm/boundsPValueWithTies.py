@@ -121,17 +121,15 @@ def bounds_p_value_with_ties(X, Y, alternative, lower_boundary, upper_boundary, 
     return [lowerBoundWMWStatistic, upperBoundWMWStatistic, lowerBoundPValue, upperBoundPValue, exact]
 
 
-
-
 # Example usage:
-X = np.array([1, 1, np.nan, 4, 5])
-Y = np.array([3, np.nan, 6, 7])
-alternative = 'two.sided'
-exact = None
-correct = True
-result = bounds_p_value_with_ties(X, Y, alternative, lower_boundary= 1, upper_boundary= np.inf, exact = exact, correct = correct)
-print("Lower bound of WMW Statistic:", result[0])
-print("Upper bound of WMW Statistic:", result[1])
-print("Lower bound of p-value:", result[2])
-print("Upper bound of p-value:", result[3])
-print("Exact:", result[4])
+# X = np.array([1, 1, np.nan, 4, 5])
+# Y = np.array([3, np.nan, 6, 7])
+# alternative = 'two.sided'
+# exact = None
+# correct = True
+# result = bounds_p_value_with_ties(X, Y, alternative, lower_boundary= 1, upper_boundary= np.inf, exact = exact, correct = correct)
+# print("Lower bound of WMW Statistic:", result[0])
+# print("Upper bound of WMW Statistic:", result[1])
+# print("Lower bound of p-value:", result[2])
+# print("Upper bound of p-value:", result[3])
+# print("Exact:", result[4])
