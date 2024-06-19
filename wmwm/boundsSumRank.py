@@ -58,14 +58,14 @@ def bounds_sum_rank(X, Y, ties, lower_boundary, upper_boundary):
     return np.array([lowerBoundSumRank, upperBoundSumRank])
 
 # Example usage:
-X = np.array([1, 2, np.nan, 4, 5])
-Y = np.array([3, np.nan, 6, 7])
-ties = True
-lower_boundary = -np.inf
-upper_boundary = np.inf
+# X = np.array([1, 2, np.nan, 4, 5])
+# Y = np.array([3, np.nan, 6, 7])
+# ties = True
+# lower_boundary = -np.inf
+# upper_boundary = np.inf
 
-result = bounds_sum_rank(X, Y, ties, lower_boundary, upper_boundary)
-print("Lower bound:", result[0])
-print("Upper bound:", result[1])
+# result = bounds_sum_rank(X, Y, ties, lower_boundary, upper_boundary)
+# print("Lower bound:", result[0])
+# print("Upper bound:", result[1])
 
 
