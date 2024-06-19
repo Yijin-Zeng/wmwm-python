@@ -1,5 +1,5 @@
 import numpy as np
-from boundsSumRank import bounds_sum_rank
+from .boundsSumRank import bounds_sum_rank
 
 
 def bounds_wmw_statistic(X, Y, ties, lower_boundary, upper_boundary):

@@ -1,6 +1,6 @@
 import numpy as np
 from scipy.stats import norm, rankdata
-from boundsWMWStatistic import bounds_wmw_statistic
+from .boundsWMWStatistic import bounds_wmw_statistic
 
 
 def bounds_p_value_with_ties(X, Y, alternative, lower_boundary, upper_boundary, exact=None, correct=False):

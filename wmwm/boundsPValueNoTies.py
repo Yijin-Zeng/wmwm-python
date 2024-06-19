@@ -1,7 +1,7 @@
 import numpy as np
 from scipy.stats import norm
-from boundsWMWStatistic import bounds_wmw_statistic
-from exactDistributionWMWStatistic import dis_WMW_exact
+from .boundsWMWStatistic import bounds_wmw_statistic
+from .exactDistributionWMWStatistic import dis_WMW_exact
 
 
 def bounds_p_value_no_ties(X, Y, alternative, exact=None, correct=False):
