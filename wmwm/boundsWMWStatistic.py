@@ -1,5 +1,4 @@
 import numpy as np
-
 from boundsSumRank import bounds_sum_rank
 
 
