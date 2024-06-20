@@ -1,7 +1,7 @@
 import numpy as np
-from .checkTies import check_ties
-from .boundsPValueWithTies import bounds_p_value_with_ties
-from .boundsPValueNoTies import bounds_p_value_no_ties
+from wmwm.checkTies import check_ties
+from wmwm.boundsPValueWithTies import bounds_p_value_with_ties
+from wmwm.boundsPValueNoTies import bounds_p_value_no_ties
 
 
 def wmwm_test(X, Y, alternative='two.sided', ties=None,
