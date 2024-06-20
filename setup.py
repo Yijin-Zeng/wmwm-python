@@ -20,7 +20,8 @@ setuptools.setup(
     ],
     install_requires=[
         "numpy",
-        "scipy"
+        "scipy",
+        "math"
     ],
     python_requires='>=3.6',
 )
