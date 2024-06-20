@@ -43,32 +43,12 @@ X[1:10] = np.nan
 Y[1:5] = np.nan
 result = wmwm_test(X, Y)
 print(result['p_value'])
-#> 1.8723317226260156e-05
-```
-
-``` python
 print(result['bounds_statistic'])
-#> [1984. 3248.]
-```
-
-``` python
 print(result['bounds_pvalue'])
-#> [1.73155893e-13 1.87233172e-05]
-```
-
-``` python
 print(result['alternative'])
-#> two.sided
-```
-
-``` python
 print(result['ties_method'])
-#> False
-```
-
-``` python
 print(result['description_bounds'])
-#> bounds_pvalue is the bounds of the p-value obtained using normal approximation with continuity correction
+#> 1.8723317226260156e-05
 ```
 
 ## References
