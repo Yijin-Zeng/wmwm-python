@@ -38,10 +38,18 @@ This is a basic example which shows you how to perform the test with missing dat
 from wmwm import wmwm_test
 import numpy as np
 
-X = np.array([1, 2, np.nan, 4, 5])
-Y = np.array([3, np.nan, 6, 7])
+np.random.seed(0)
+X = np.random.normal(0, 1, 100)
+Y = np.random.normal(1, 1, 100)
+X[1:10] = np.nan
+Y[1:5] = np.nan
 result = wmwm_test(X, Y)
 print(result['p_value'])
+print(result['bounds_statistic'])
+print(result['bounds_pvalue'])
+print(result['alternative'])
+print(result['ties_method'])
+print(result['description_bounds'])
 ```
 ```{python}
 ```
