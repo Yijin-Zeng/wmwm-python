@@ -69,7 +69,7 @@ def wmwm_test(X, Y, alternative='two.sided', ties=None,
     
     return RES
 
-# Example
-# X = np.array([1, 2, np.nan, 4, 5])
-# Y = np.array([3, np.nan, 6, 7])
-# result = wmwm_test(X, Y)
+#Example
+X = np.array([1, 2, np.nan, 4, 5])
+Y = np.array([3, np.nan, 6, 7])
+result = wmwm_test(X, Y)

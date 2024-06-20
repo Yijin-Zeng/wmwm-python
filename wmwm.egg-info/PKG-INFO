@@ -1,3 +1,19 @@
+Metadata-Version: 2.1
+Name: wmwm
+Version: 1.0.0
+Summary: A Python package for perform Wilcoxon-Mann-Whitney test with missing data with controlled Type I error
+Home-page: https://github.com/Yijin-Zeng/wmwm-python
+Author: Yijin Zeng
+Author-email: yijin.zeng20@imperial.ac.uk
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
@@ -33,8 +49,8 @@ This is a basic example which shows you how to perform the test with
 missing data:
 
 ``` python
-import numpy as np
 from wmwm import wmwm_test
+import numpy as np
 
 np.random.seed(0)
 X = np.random.normal(0, 1, 100)
