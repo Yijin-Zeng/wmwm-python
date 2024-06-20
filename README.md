@@ -20,9 +20,6 @@ possible p-value of the Wilcoxon-Mann-Whitney test.
 
 ## Installation
 
-You can install the development version of wmwm from
-[GitHub](https://github.com/) with:
-
 ``` sh
 pip install wmwm
 ```
@@ -48,7 +45,6 @@ print(result['bounds_pvalue'])
 print(result['alternative'])
 print(result['ties_method'])
 print(result['description_bounds'])
-#> 1.8723317226260156e-05
 ```
 
 ## References
