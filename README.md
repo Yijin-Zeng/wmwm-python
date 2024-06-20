@@ -6,9 +6,9 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-This package includes one function `wilcoxonMissing()`, which performs
-the two-sample hypothesis test method proposed in (Zeng et al., 2024)
-for univariate data when data are not fully observed. Its method is a
+This package includes one function `wmwm_test()`, which performs the
+two-sample hypothesis test method proposed in (Zeng et al., 2024) for
+univariate data when data are not fully observed. Its method is a
 theoretical extension of Wilcoxon-Mann-Whitney test in the presence of
 missing data, which controls the Type I error regardless of values of
 missing data.
