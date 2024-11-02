@@ -12,10 +12,10 @@ This method is a theoretical extension of Wilcoxon-Mann-Whitney test in
 the presence of missing data, which controls the Type I error regardless 
 of values of missing data.
 
-(Zeng et al., 2024) computes the bounds of the Wilcoxon-Mann-Whitne test 
-statistic and its p-value will be computed in the presence of missing data. 
-The p-value of the test method proposed in (Zeng et al., 2024) is then 
-returned as the maximum possible p-value of the Wilcoxon-Mann-Whitney test.
+Bounds of the Wilcoxon-Mann-Whitne test statistic and its p-value will be 
+computed in the presence of missing data. The p-value of the test method 
+proposed in (Zeng et al., 2024) is then returned as the maximum possible 
+p-value of the Wilcoxon-Mann-Whitney test.
 
 ## Installation
 
