@@ -5,7 +5,7 @@ import math
 
 def num_seq(U, n, m):
     '''
-    Given the sample sizes n, m of x and y, return the number of sequences such that the values from x precedes the values from y U times. For more details, see the reference.
+    Given the sample sizes n, m of x and y, return the number of sequences such that the values of x precedes the values of y U times. For more details, see the reference provided.
     
     Parameters
     ----------
