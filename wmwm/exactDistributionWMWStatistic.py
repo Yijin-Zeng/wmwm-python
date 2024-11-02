@@ -5,12 +5,12 @@ import math
 
 def num_seq(U, n, m):
     '''
-    Compute the number sequences rank sum statistics: U, number of samples in x and y: n and m.
+    Given the sample sizes n, m of x and y, return the number of sequences such that the values from x precedes the values from y U times. For more details, see the reference.
     
     Parameters
     ----------
     U : int
-        Replace each x by a 0 and each y by a 1. Let U count the number of times a 1 precedes a 0.
+        Value for which the number is computed.
     n : int
         Sample size of x.
     m : int
@@ -19,9 +19,9 @@ def num_seq(U, n, m):
     Returns
     -------
     int
-        The number of sequences of n O's and m 1's in each of which a 1 precedes a 0 U times.
+        The number of sequences such that the values from x precedes the values from y U times
     
-    References
+    Reference
     ----------
     Mann HB, Whitney DR. On a test of whether one of two random variables is stochastically larger than the other. The annals of mathematical statistics. 1947 Mar 1:50-60.
 
@@ -41,21 +41,21 @@ def num_seq(U, n, m):
 
 def dis_WMW_exact(U,n,m, lower_tail = True):
     '''
-    Distribution function for the distribution of the Wilcoxon rank sum statistic 
-    obtained from samples with size n and m, respectively
+    Distribution function of the Wilcoxon rank sum statistic obtained from x, y with size n and m, respectively.
 
     Parameters
     ----------
-    t : TYPE
-        DESCRIPTION.
-    n : TYPE
-        DESCRIPTION.
-    m : TYPE
-        DESCRIPTION.
+    U : int
+        Value of the Wilcoxon rank sum statistic for which the probability is calculated.
+    n : int
+        Sample size of x.
+    m : int
+        Sample size of y.
 
     Returns
     -------
-    None.
+    float
+        Probability of Wilcoxon rank sum statistic smaller or equal than U
 
     '''
     # number of all possible combinations of x and y

@@ -6,17 +6,16 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-This package includes one function `wmwm_test()`, which performs the
-two-sample hypothesis test method proposed in (Zeng et al., 2024) for
-univariate data when data are not fully observed. Its method is a
-theoretical extension of Wilcoxon-Mann-Whitney test in the presence of
-missing data, which controls the Type I error regardless of values of
-missing data.
+This package performs the two-sample hypothesis test method proposed in 
+(Zeng et al., 2024) for univariate data when data are not fully observed. 
+This method is a theoretical extension of Wilcoxon-Mann-Whitney test in 
+the presence of missing data, which controls the Type I error regardless 
+of values of missing data.
 
-Bounds of the Wilcoxon-Mann-Whitne test statistic and its p-value will
-be computed in the presence of missing data. The p-value of the test
-method proposed in (Zeng et al., 2024) is then returned as the maximum
-possible p-value of the Wilcoxon-Mann-Whitney test.
+(Zeng et al., 2024) computes the bounds of the Wilcoxon-Mann-Whitne test 
+statistic and its p-value will be computed in the presence of missing data. 
+The p-value of the test method proposed in (Zeng et al., 2024) is then 
+returned as the maximum possible p-value of the Wilcoxon-Mann-Whitney test.
 
 ## Installation
 

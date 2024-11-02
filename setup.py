@@ -5,10 +5,10 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="wmwm",
-    version="1.0.0",
+    version="0.0.1",
     author="Yijin Zeng",
     author_email="yijin.zeng20@imperial.ac.uk",
-    description="A Python package for perform Wilcoxon-Mann-Whitney test with missing data with controlled Type I error",
+    description="A Python package performing Wilcoxon-Mann-Whitney test in the presence of missing data with controlled Type I error",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/Yijin-Zeng/wmwm-python",
