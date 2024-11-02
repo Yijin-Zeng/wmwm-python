@@ -52,7 +52,7 @@ Y = np.array([0, 1, 0, -1])
 wmwm_test(X, Y, ties = True, alternative = 'two.sided')
 
 
-## specifying lower.boundary and upper.boundary:
+## specifying lower_boundary and upper_boundary:
 wmwm_test(X, Y, ties = True, alternative = 'two.sided', lower_boundary = -1, upper_boundary = 9)
 
 
