@@ -15,4 +15,4 @@ def bounds_wmw_statistic(X, Y, ties, lower_boundary, upper_boundary):
     lowerBoundWMWStatistic = lowerBoundSumRank - n * (n + 1) / 2
     upperBoundWMWStatistic = upperBoundSumRank - n * (n + 1) / 2
 
-    return np.array([lowerBoundWMWStatistic, upperBoundWMWStatistic])
+    return np.array([int(lowerBoundWMWStatistic), int(upperBoundWMWStatistic)])
