@@ -50,12 +50,12 @@ def wmwm_test(X, Y, alternative='two.sided', ties=None,
         
         # Description of bounds
         if exact:
-            DESCRIPTIONBOUNDS = 'bounds_pvalue gives the bounds of the exact p-value'
+            DESCRIPTIONBOUNDS = 'bounds_pvalue: bounds of the exact p-value'
         else:
             if correct:
-                DESCRIPTIONBOUNDS = 'bounds_pvalue gives the bounds of the p-value obtained using normal approximation with continuity correction'
+                DESCRIPTIONBOUNDS = 'bounds_pvalue: bounds of the p-value obtained using normal approximation with continuity correction'
             else:
-                DESCRIPTIONBOUNDS = 'bounds_pvalue gives the bounds of the p-value obtained using normal approximation'
+                DESCRIPTIONBOUNDS = 'bounds_pvalue: bounds of the p-value obtained using normal approximation without continuity correction'
     
     # Construct result dictionary
     RES = {
