@@ -47,12 +47,12 @@ def bounds_sum_rank(X, Y, ties, lower_boundary, upper_boundary):
             print('upper_boundary must be larger or equal than the maximum of all observed data. upper_boundary is set to Inf')
             b = np.inf
 
-        lowerBoundSumRank += (np.sum(np.array(Y_prime) == a) * (n - n_prime)
-                              + np.sum(np.array(X_prime) == b) 
+        lowerBoundSumRank += (np.sum(np.array(Y_prime) == a) * (n - n_prime) \
+                              + np.sum(np.array(X_prime) == b) \
                               * (m - m_prime)) / 2
 
-        upperBoundSumRank -= (np.sum(np.array(X_prime) == a) * (m - m_prime)
-                              + np.sum(np.array(Y_prime) == b) 
+        upperBoundSumRank -= (np.sum(np.array(X_prime) == a) * (m - m_prime) \
+                              + np.sum(np.array(Y_prime) == b) \
                               * (n - n_prime)) / 2
 
     return np.array([lowerBoundSumRank, upperBoundSumRank])
