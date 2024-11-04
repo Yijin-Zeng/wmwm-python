@@ -6,8 +6,8 @@ with open("README.md", "r") as fh:
 setuptools.setup(
     name="wmwm",
     version="0.0.4",
-    author="Yijin Zeng, Dean Bodenham, Niall Adams",
-    author_email="yijinzeng20@gmail.com, deanbodenhambsse@gmail.com, n.adams@imperial.ac.uk",
+    author="Yijin Zeng",
+    author_email="yijinzeng20@gmail.com",
     maintainer="Yijin Zeng",
     maintainer_email="yijinzeng20@gmail.com",
     description="A Python package performing Wilcoxon-Mann-Whitney test in the presence of missing data with controlled Type I error",
