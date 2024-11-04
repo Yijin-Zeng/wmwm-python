@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+wmwm/__init__.py
+wmwm/boundsPValueNoTies.py
+wmwm/boundsPValueWithTies.py
+wmwm/boundsSumRank.py
+wmwm/boundsWMWStatistic.py
+wmwm/checkTies.py
+wmwm/exactDistributionWMWStatistic.py
+wmwm/wilcoxonMissing.py
+wmwm.egg-info/PKG-INFO
+wmwm.egg-info/SOURCES.txt
+wmwm.egg-info/dependency_links.txt
+wmwm.egg-info/requires.txt
+wmwm.egg-info/top_level.txt
