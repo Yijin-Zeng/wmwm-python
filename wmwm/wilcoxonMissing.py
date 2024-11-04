@@ -7,6 +7,42 @@ from wmwm.boundsPValueNoTies import bounds_p_value_no_ties
 def wmwm_test(X, Y, alternative='two.sided', ties=None,
               lower_boundary=-np.inf, upper_boundary=np.inf, exact=None, 
               correct=True):
+    '''
+    Performs the two-sample Wilcoxon-Mann-Whitney test in the presence of missing data, which controls the Type I error regardless of the values of missing data. For more details, see the reference (Zeng et al., 2024).
+    
+    Parameters
+    ----------
+    X,Y : numeric vectors of data values with potential missing data.
+    alternative : a character string specifying the alternative hypothesis, must be one of "two.sided" (default), "greater" or "less".
+    ties : a logical indicating whether samples could be tied. If observed samples contain tied samples, ties defaults to True. If observed samples do not contain tied samples, ties defaults to False.
+    lower_boundary: (when ties is True) a number specifying the lower bound of the data set, must be smaller or equal than the minimum of all observed data.
+    upper_boundary: (when ties is True) a number specifying the upper bound of the data set, must be larger or equal than the maximum of all observed data.
+    exact: a logical indicating whether the bounds should be of an exact p-value.
+    correct: a logical indicating whether the bounds should be of a p-value applying continuity correction in the normal approximation.
+
+    Details
+    -------
+    wmwm_test performs the two-sample hypothesis test method proposed in (Zeng et al., 2024) for univariate data when not all data are observed. Bounds of the Wilcoxon-Mann-Whitney test statistic and its p-value will be computed in the presence of missing data. The p-value of the test method proposed in (Zeng et al., 2024) is then returned as the maximum possible p-value of the Wilcoxon-Mann-Whitney test.
+
+    By default (if exact is not specified), this function returns bounds of an exact p-value if the X and Y both contain less than 50 samples and there are no ties. Otherwise, bounds of a p-value calculated using normal approximation with continuity correction will be returned.
+
+        
+    Returns
+    -------
+    p_value: the p-value for the test.
+    bounds_statistic: bounds of the value of the Wilcoxon-Mann-Whitney test statistic.
+    bounds_pvalue: bounds of the p-value of the Wilcoxon-Mann-Whitney test.
+    alternative: a character string describing the alternative hypothesis.
+    ties_method: a character string describing whether samples are considered tied.
+    description_bounds: a character string describing the bounds of the p-value.
+
+    
+    Reference
+    ----------
+    [1] Mann HB, Whitney DR. On a test of whether one of two random variables is stochastically larger than the other. The annals of mathematical statistics. 1947 Mar 1:50-60.
+    [2] Zeng Y, Adams NM, Bodenham DA. On two-sample testing for data with arbitrarily missing values. arXiv preprint arXiv:2403.15327. 2024 Mar 22.
+
+    '''
     
     if alternative not in ('two.sided', 'less', 'greater'):
         
