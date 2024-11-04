@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="wmwm",
-    version="0.0.4",
+    version="0.0.1",
     author="Yijin Zeng",
     author_email="yijinzeng20@gmail.com",
     maintainer="Yijin Zeng",
