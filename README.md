@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# wmwm
+# wmwm [![PyPI Downloads](https://static.pepy.tech/badge/wmwm)](https://pepy.tech/projects/wmwm)
 
 <!-- badges: start -->
 <!-- badges: end -->
